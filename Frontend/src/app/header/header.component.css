@@ -1,0 +1,69 @@
+
+h1,h2,h3,.highlight,.navbar a,#masthead h4 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  }
+
+  .navbar.affix {
+    position:fixed;
+    top:0;
+    width:100%;
+  }
+  .navbar-bright {
+    background-color:#111666;
+    color:rgb(255, 255, 255);
+    margin-bottom: 0;
+    border-width: 0;
+    height: 1.7cm;
+  }
+  
+  .navbar-bright a, .navbar-bright .navbar-brand, #masthead h4 {
+    position: relative;
+    display: inline-block;
+    color:#ffffff;
+    font-size:18px;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing:.08em;
+    font-weight: 400;
+    
+  }
+  .navbar-bright a:hover {
+    background: linear-gradient(to right, rgb(255, 255, 255), rgb(38, 38, 165) 50%, rgb(129, 153, 233) 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+    /* color:#010107;
+    
+    background-position: 0 100%;
+    text-transform: uppercase;
+    letter-spacing:.08em; */
+  }
+  
+  .navbar-bright li > a:hover {
+    background-color:#000044;
+  }
+  
+  .dropdown-menu {
+    min-width: 250px;
+  }
+  
+  .caret {
+    color:#fff;
+  }
+  
+  .navbar-toggle {
+    color:#fff;
+    border-width:0;
+  }
+  
+  .navbar-toggle:hover {
+    background-color:#fff;
+  }
+  
+  .panel {
+    border-color:transparent;
+    border-radius:0;
+  }  

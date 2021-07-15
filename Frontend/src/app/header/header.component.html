@@ -1,0 +1,25 @@
+
+
+<header class="navbar navbar-bright navbar-fixed-top" role="banner">
+
+    <div class="container">
+        <a class="navbar-brand" href="">
+            <img src="https://cdn.dribbble.com/users/2425910/screenshots/6464672/52.jpg" width="30" height="30"
+                class="d-inline-block align-top" alt="">
+            EventAlly
+        </a>
+
+        <div class="navbar-header">
+
+            <a routerLink="" class="navbar-brand" *ngIf="_auth.loggedIn()">Home</a>
+            <a routerLink="login" class="navbar-brand" *ngIf="!_auth.loggedIn()" routerLinkActive="active">Log In</a>
+            <a routerLink="signup" class="navbar-brand" *ngIf="!_auth.loggedIn()" routerLinkActive="active">Sign Up</a>
+            <a routerLink="events" class="navbar-brand">Events</a>
+            <a routerLink="addEvent" class="navbar-brand" *ngIf="_auth.loggedIn()">Add Event</a>
+            <a routerLink="signup" class="navbar-brand" *ngIf="_auth.loggedIn()" (click)="logoutUser()">Logout</a>
+        </div>
+        <nav class="collapse navbar-collapse" role="navigation">
+        </nav>
+    </div>
+
+</header>

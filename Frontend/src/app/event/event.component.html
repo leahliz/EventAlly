@@ -1,0 +1,15 @@
+
+
+  <div class="container" class="main">
+    <div class="row">
+      <div class="col-sm-8"><h3 style="padding:2%;margin:2%;text-align: center;">{{event.title}}</h3><span style="margin: 2%;">{{event.description}}</span></div>
+      <div class="col-sm-4"><img alt="" [src]="event.image" style="height:300px;width:300px;margin:2px;padding:2%;margin-top: 5%;" class="img-thumbnail"></div>
+    </div>
+    <div class="row">
+      <div class="col-sm"><i class="fas fa-map-marker-alt" style="margin: 2%;padding:2%">{{event.venue}}</i></div>
+      <div class="col-sm"><i class="fas fa-calendar-day"  style="margin: 2%;padding:2%">{{event.date}}</i></div>
+      <div class="col-sm" style="margin: 1%;">Organised by {{event.organiser}}</div>
+    </div>
+    <button style="margin: 2%" (click)="update()">Update</button>
+  </div>
+ 

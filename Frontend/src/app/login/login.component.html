@@ -1,0 +1,28 @@
+<div class=back>
+    <div class="form">
+        <div class="form__box">
+            <div class="form__left">
+                <div class="form__padding"><img class="form__image"
+                        src="https://images.unsplash.com/photo-1624623306028-9c536fd89960?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fHJvdW5kfGVufDB8MnwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" />
+                </div>
+            </div>
+            <div class="form__right">
+                <div class="form__padding-right">
+                    <form name="userlogin" #userlogin="ngForm" (ngSubmit)="validateUserLogin()">
+                        <h1 class="form__title">User Login</h1>
+                        <label for="email">Email</label>
+                        <input class="form__email" type="email" name="email" placeholder="Email"
+                            [(ngModel)]="user.email" #email="ngModel" required />
+                        <label for="password">Password</label>
+                        <input class="form__password" type="password" name="password" placeholder="******"
+                            [(ngModel)]="user.password" minlength="6" required #password="ngModel" />
+                        <input class="form__submit-btn" type="submit" value="Login"
+                            [disabled]="userlogin.form.invalid" />
+                    </form>
+
+                    <p> <a class="form__link" href="signup">Create your account</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
