@@ -1,7 +1,7 @@
 //Accessing mongoose package
 const mongoose = require('mongoose');
-const validator = require('validator');
-const bcrypt = require('bcrypt');
+/*const validator = require('validator');
+const bcrypt = require('bcrypt');*/
 
 //Database connection
 //('mongodb://localhost:27017/Events');
@@ -10,7 +10,18 @@ mongoose.connect("mongodb+srv://userone:userone@libappvers0.op9lt.mongodb.net/Li
 //schema definition
 const Schema = mongoose.Schema;
 
-const UserSchema = new Schema({
+const userSchema=new Schema({
+    FirstName:String,
+    LastName:String,
+    email:String,
+    password:String
+    });
+    
+    var userData=mongoose.model("UserData",userSchema);
+    
+    module.exports=userData;
+
+/*const UserSchema = new Schema({
     id: { type: String },
     FirstName: {
         type: String,
@@ -48,4 +59,4 @@ UserSchema.statics.findByCredentials = async (email, password) => {
 }
 //Model creation
 const Userdata = mongoose.model('userdata', UserSchema);
-module.exports = Userdata;
+module.exports = Userdata;*/

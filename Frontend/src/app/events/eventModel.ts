@@ -6,6 +6,7 @@ export class EventModel{
         public venue:String,
         public organiser:String,
         public description:String,
-        public image:String
+        public image:String,
+        public owned:String
     ){}
 };

@@ -6,13 +6,13 @@ import { User } from "./interfaces/user"
   providedIn: 'root'
 })
 export class AuthService {
-  private _loginUrl = "http://localhost:3000/login";
+  private _loginUrl = "http://localhost:3100/login";
 
   registerUser(user: User) {
-    return this.http.post<any>("http://localhost:3000/register", user);
+    return this.http.post<any>("http://localhost:3100/register", {"user":user});
   }
   validateUserLogin(user: any) {
-    return this.http.post<any>("http://localhost:3000/login", user);
+    return this.http.post<any>("http://localhost:3100/login", user);
   }
   constructor(private http: HttpClient) { }
 

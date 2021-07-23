@@ -11,10 +11,13 @@ import { Router } from '@angular/router';
 export class AddEventComponent implements OnInit {
 
   constructor(private eventService:EventsService,private router:Router) { }
-event=new EventModel("","","","","","","");
+event=new EventModel("","","","","","","","");
+
   ngOnInit(): void {
   }
 AddEvent(){
+  this.event.owned=localStorage.getItem('owner');
+  console.log(this.event);
   this.eventService.newEvent(this.event);
   alert("Succcess");
   this.router.navigate(["/events"]);

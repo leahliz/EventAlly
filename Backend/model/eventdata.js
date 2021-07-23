@@ -9,7 +9,8 @@ const eventSchema=new Schema({
      venue:String,
      organiser:String,
      description:String,
-     image:String
+     image:String,
+     owned:String
 });
  var eventdata=mongoose.model("eventdata",eventSchema);
  module.exports=eventdata;

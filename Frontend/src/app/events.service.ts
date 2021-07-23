@@ -19,4 +19,7 @@ export class EventsService {
     return this.http.post<any>("http://localhost:3100/addevent",{"event":item})
     .subscribe(data=>{console.log(data)});
   }
+  getO(){
+    return localStorage.getItem('owner');
+  }
 }

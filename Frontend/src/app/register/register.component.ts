@@ -23,11 +23,12 @@ export class RegisterComponent implements OnInit {
     console.log("Registering the User..");
     this._auth.registerUser(this.user)
       .subscribe(
-        (data) => {
-          console.log("Status:" + data);
+        (res) => {
+        localStorage.setItem("token",res.token);
+        this._router.navigate(['login']);
         }
       )
     alert("Registration Success! Login to Continue");
-    this._router.navigate(['login']);
+  
   }
 }

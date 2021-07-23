@@ -1,14 +1,14 @@
 const express=require("express");
 const cors=require("cors");
 var bodyparser=require("body-parser");
-const jwt = require('jsonwebtoken')
-const bcrypt = require('bcrypt');
-const validator = require('validator');
+var jwt = require('jsonwebtoken')
+/*const bcrypt = require('bcrypt');
+const validator = require('validator');*/
 
 var app=new express();
 
 const eventData=require("./model/eventdata");
-const Userdata = require("./model/Userdata");
+const userData = require("./model/Userdata");
 
 app.use(cors());
 app.use(bodyparser.json());
@@ -56,7 +56,8 @@ app.post("/addevent",function(req,res){
         venue:req.body.event.venue,
         organiser:req.body.event.organiser,
         description:req.body.event.description,
-        image:req.body.event.image  
+        image:req.body.event.image ,
+        owned:req.body.event.owned
     };
 
     console.log(events);
@@ -85,7 +86,7 @@ app.post('/adminLogin', (req, res) => {
         res.status(200).send({ token });
     }
 });
-
+/*
 app.post('/register', (req, res) => {
 
     let userData = req.body;
@@ -121,7 +122,41 @@ app.post('/login', async (req, res) => {
 
     }
 
+})*/
+app.post("/login",(req,res)=>{
+    let user=req.body;
+userData.findOne({$and:[{email:user.email},{password:user.password}]})
+.then((obj)=>{
+    if(!obj){
+    res.status(401).send("Invalid username or password");
+    }
+    else{
+        console.log("succes");
+        let payload={subject:user.email+user.password};
+        let token=jwt.sign(payload,"secretKey");
+        console.log(token);
+        res.status(200).send({token,email:user.email});
+    }
 })
+});
+
+app.post("/register",(req,res)=>{
+    res.header("Access-Control-Allow-Origin","*");
+    res.header("Access-Control-Allow-Methods:GET,POST,PATCH,PUT,DELETE,OPTIONS");
+    console.log(req.body);
+    var User={
+        FirstName:req.body.user.name,
+        
+        email:req.body.user.email,
+        password:req.body.user.password
+    };
+    var nuse=new userData(User);
+    nuse.save();
+    let payload={subject:User.email+User.password};
+        let token=jwt.sign(payload,"secretKey");
+        res.status(200).send({token});
+});
+
 
 app.listen(3100,function(){
     console.log("listening at 3100");

@@ -22,15 +22,16 @@ export class LoginComponent implements OnInit {
   validateUserLogin() {
     this._auth.validateUserLogin(this.user)
       .subscribe(
-        res => {
+        (res) => {
           localStorage.setItem('token', res.token);
+          localStorage.setItem("owner",res.email)
           // this.loginOccured.emit(1);
-          localStorage.setItem("userType", 'user');
-          this._router.navigate(['/userhome']);
+          //localStorage.setItem("userType", 'user');
+          this._router.navigate(['/events']);
         },
-        err => {
+        (err) => {
           console.log(err);
-          this._router.navigate(['/userLogin']);
+          this._router.navigate(['/']);
           alert('Invalid Credentials! Please try again!')
 
         }

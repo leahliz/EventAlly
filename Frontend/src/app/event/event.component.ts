@@ -8,11 +8,16 @@ import { Router } from '@angular/router';
 export class EventComponent implements OnInit {
 
   event:any;
-
+ created:any;
+ 
   constructor(private router:Router) { }
 
   ngOnInit(): void {
     this.event=history.state.data;
+  }
+  check(){
+    if(this.event.owned==localStorage.getItem('owner'))
+    return !!localStorage.getItem('owner');
   }
 update(){
   this.router.navigate(["/update"],{state:{"data":this.event}})

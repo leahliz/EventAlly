@@ -16,7 +16,7 @@ const routes: Routes = [
 {path:"update",component:UpdateComponent},
 {path:"addEvent",component:AddEventComponent},
 {path:"signup",component:RegisterComponent},
-{path:"login",component:LoginComponent},
+{path:'login',component:LoginComponent},
 { path: 'userhome', component: UserHomeComponent, canActivate: [AuthGuard] }
 ];
 
