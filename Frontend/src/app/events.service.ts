@@ -22,4 +22,9 @@ export class EventsService {
   getO(){
     return localStorage.getItem('owner');
   }
+  delEve(item:any){
+    return this.http.post<any>("http://localhost:3100/dlt",{"event":item})
+    .subscribe(data=>{console.log(data)});
+    
+  }
 }

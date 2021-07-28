@@ -66,6 +66,26 @@ app.post("/addevent",function(req,res){
 
 })
 
+app.post("/dlt",function(req,res){
+    res.header("Access-Control-Allow-Origin","*");
+    res.header("Access-Control-Allow-Methods:GET,POST,PATCH,PUT,DELETE,OPTIONS");
+    var events={
+        id:req.body.event._id,
+        title:req.body.event.title,
+        date:req.body.event.date,
+        venue:req.body.event.venue,
+        organiser:req.body.event.organiser,
+        description:req.body.event.description,
+        image:req.body.event.image
+
+    };
+    
+    var myquery={_id:events.id};
+    eventData.deleteOne(myquery)
+    .then((obj)=>{
+    console.log("deleted");})
+});
+
 username = 'admin@123.com';
 password = '123456';
 

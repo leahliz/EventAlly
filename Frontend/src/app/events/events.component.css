@@ -52,10 +52,12 @@ button{
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
+    
 }
 p{
 margin-left: 2%;
 margin-top: 2%;
+
 }
 /*.col-sm-2{
     display: inline-block;

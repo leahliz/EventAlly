@@ -22,4 +22,5 @@ AddEvent(){
   alert("Succcess");
   this.router.navigate(["/events"]);
 }
+
 }

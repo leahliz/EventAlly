@@ -14,3 +14,17 @@
     font-size: large;
     color: white;
 }
+
+button{
+    display: block;
+    width: 20%;
+    margin-bottom: 25px;
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    background: #948989;
+    color: cornsilk;
+    padding: 10px;
+    font-size: 14px;
+    position: relative;
+}

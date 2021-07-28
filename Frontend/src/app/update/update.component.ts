@@ -20,4 +20,9 @@ this.eventService.update(this.event);
 alert("Sucess")
 this.router.navigate(["/events"])
 }
+DelEvent(){
+  this.eventService.delEve(this.event);
+  alert("Deleted");
+  this.router.navigate(["/events"]);
+}
 }
