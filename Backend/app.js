@@ -23,6 +23,26 @@ app.get("/events",function(req,res){
     });
 });
 
+app.post("/search",function(req,res){
+    res.header("Access-Control-Allow-Origin","*");
+    res.header("Access-Control-Allow-Methods:GET,POST,PATCH,PUT,DELETE,OPTIONS");
+     console.log(req.body);
+    let name=req.body.event;
+    
+    eventData.findOne({title:name})
+    .then((obj)=>{
+        if(!obj){
+            res.status(401).send("Event does not exist");
+        }
+        else{
+            console.log("Found"+obj);
+            res.send(obj);
+        }
+      
+       
+    });
+});
+
 app.post("/update",function(req,res){
     res.header("Access-Control-Allow-Origin","*");
     res.header("Access-Control-Allow-Methods:GET,POST,PATCH,PUT,DELETE,OPTIONS");

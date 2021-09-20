@@ -25,6 +25,7 @@ h1,h2,h3,.highlight,.navbar a,#masthead h4 {
     text-transform: uppercase;
     letter-spacing:.08em;
     font-weight: 400;
+    margin: 10px;
     
   }
   .navbar-bright a:hover {

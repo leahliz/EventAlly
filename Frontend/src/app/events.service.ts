@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import{HttpClient} from "@angular/common/http";
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -25,6 +26,10 @@ export class EventsService {
   delEve(item:any){
     return this.http.post<any>("http://localhost:3100/dlt",{"event":item})
     .subscribe(data=>{console.log(data)});
+  }
+  searchEvent(item:any){
+  
+    return this.http.post<any>("http://localhost:3100/search",{"event":item});
     
   }
 }

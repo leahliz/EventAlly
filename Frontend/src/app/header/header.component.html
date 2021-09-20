@@ -17,9 +17,16 @@
             <a routerLink="events" class="navbar-brand">Events</a>
             <a routerLink="addEvent" class="navbar-brand" *ngIf="_auth.loggedIn()">Add Event</a>
             <a routerLink="signup" class="navbar-brand" *ngIf="_auth.loggedIn()" (click)="logoutUser()">Logout</a>
+           
+        </div>
+        <div class="navbar-header">
+            <form class="d-flex">
+                <input class="form-control me-2" type="text" placeholder="Search Event Name" name="search" [(ngModel)]="search" value={{search}} />
+                <button class="btn btn-outline-success" type="submit" (click)="Search()" >Search</button>
+              </form>
         </div>
         <nav class="collapse navbar-collapse" role="navigation">
         </nav>
     </div>
-
+   
 </header>
