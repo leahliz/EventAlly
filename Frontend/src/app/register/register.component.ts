@@ -10,6 +10,7 @@ import { Router } from '@angular/router'
 })
 export class RegisterComponent implements OnInit {
   user: User = {
+    _id:'',
     name: '',
     email: '',
     password: '',

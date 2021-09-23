@@ -18,6 +18,10 @@ import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { LoginComponent } from './login/login.component';
 import { UserHomeComponent } from './user-home/user-home.component';
 import { RegisterComponent } from './register/register.component';
+import { AboutComponent } from './about/about.component';
+import { AdminHomeComponent } from './admin-home/admin-home.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -33,7 +37,11 @@ import { RegisterComponent } from './register/register.component';
     AddEventComponent,
     LoginComponent,
     UserHomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    AboutComponent,
+    AdminHomeComponent,
+    AdminloginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

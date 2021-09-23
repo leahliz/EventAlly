@@ -1,0 +1,31 @@
+
+<body>
+    <section>
+        <div class="container">
+
+            <div class="user signupBx">
+                <div class="formBx">
+                    <form name="userlogin" #myForm="ngForm" (ngSubmit)="validateUser()">
+                        <h2>Admin Login</h2>
+
+                        <input type="email" name="email" placeholder="Email" [(ngModel)]="user.email" required
+                            #email="ngModel" [ngClass]="{ 'is-invalid': myForm.submitted && name.invalid }" required />
+                        <input type="password" name="password" placeholder="Password" [(ngModel)]="user.password"
+                            minlength="6" required #password="ngModel" />
+                        <input type="submit" name="" value="Sign In" />
+                        <p class=" signup">
+                            Already have an account ?
+                            <a href="login">Sign in.</a>
+                        </p>
+                    </form>
+                </div>
+                <div class="imgBx"><img
+                        src="https://raw.githubusercontent.com/WoojinFive/CSS_Playground/master/Responsive%20Login%20and%20Registration%20Form/img2.jpg"
+                        alt="" />
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+</body>

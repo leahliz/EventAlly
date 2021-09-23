@@ -27,4 +27,16 @@ export class AuthService {
     return localStorage.getItem('token')
   }
 
+  getUsers() {
+    return this.http.get("http://localhost:3100/users")
+  }
+  deleteUser(id: any) {
+    return this.http.delete("http://localhost:3100/removeUsers/" + id)
+  }
+
+  
+  validateUser(user: any) {
+    return this.http.post<any>("http://localhost:3100/adminLogin", user);
+  }
+
 }

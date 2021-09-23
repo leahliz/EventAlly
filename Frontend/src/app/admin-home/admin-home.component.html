@@ -1,0 +1,348 @@
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:30px">
+    <!-- The Grid -->
+    <div class="w3-row">
+        <!-- Left Column -->
+        <div class="w3-col m3">
+            <!-- Alert Box -->
+            <div
+                class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
+                <span onclick="this.parentElement.style.display='none'"
+                    class="w3-button w3-theme-l3 w3-display-topright">
+                    <i class="fa fa-remove"></i>
+                </span>
+                <p><strong>Hey! Admin Welcome Back!</strong></p>
+                <p>Check out the new events</p>
+            </div>
+            <!-- Profile -->
+            <div class="w3-card w3-round w3-white">
+                <div class="w3-container">
+                    <h4 class="w3-center"></h4>
+                    <p class="w3-center"><img src="https://www.w3schools.com/w3images/avatar3.png" class="w3-circle"
+                            style="height:106px;width:106px" alt="Avatar"></p>
+                    <hr>
+                    <p><i class="fas fa-user-shield"></i> Admin</p>
+
+
+                </div>
+            </div>
+            <br>
+
+            <!-- Accordion -->
+            <div class="w3-card w3-round">
+                <div class="w3-white">
+
+                    <button onclick="myFunction('Demo2')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i
+                            class="fa fa-calendar-check-o fa-fw w3-margin-right"></i>Events</button>
+                    <div id="Demo2" class="w3-hide w3-container">
+                        <p>Some other text..</p>
+                    </div>
+                    <button onclick="myFunction('Demo3')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i
+                            class="fa fa-users fa-fw w3-margin-right"></i>Photos</button>
+                    <div id="Demo3" class="w3-hide w3-container">
+                        <div class="w3-row-padding">
+                            <br>
+                            <div class="w3-half">
+                                <img src="https://www.w3schools.com/w3images/lights.jpg" style="width:100%"
+                                    class="w3-margin-bottom">
+                            </div>
+                            <div class="w3-half">
+                                <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%"
+                                    class="w3-margin-bottom">
+                            </div>
+                            <div class="w3-half">
+                                <img src="https://www.w3schools.com/w3images/mountains.jpg" style="width:100%"
+                                    class="w3-margin-bottom">
+                            </div>
+                            <div class="w3-half">
+                                <img src="https://www.w3schools.com/w3images/forest.jpg" style="width:100%"
+                                    class="w3-margin-bottom">
+                            </div>
+                            <div class="w3-half">
+                                <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%"
+                                    class="w3-margin-bottom">
+                            </div>
+                            <div class="w3-half">
+                                <img src="https://www.w3schools.com/w3images/snow.jpg" style="width:100%"
+                                    class="w3-margin-bottom">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <!-- Interests -->
+            <div class="w3-card w3-round w3-white w3-hide-small">
+                <div class="w3-container">
+                    <p>Interests</p>
+                    <p>
+                        <span class="w3-tag w3-small w3-theme-d5">News</span>
+                        <span class="w3-tag w3-small w3-theme-d2">Games</span>
+                        <span class="w3-tag w3-small w3-theme-l2">Food</span>
+                        <span class="w3-tag w3-small w3-theme-l3">Design</span>
+                        <span class="w3-tag w3-small w3-theme-l4">Art</span>
+                        <span class="w3-tag w3-small w3-theme-l5">Photos</span>
+                    </p>
+                </div>
+            </div>
+            <br>
+            <div class="w3-card w3-round w3-white w3-padding-32 w3-center">
+                <p><i class="fa fa-home w3-xxlarge"></i></p>
+            </div>
+
+
+
+
+            <!-- End Left Column -->
+        </div>
+
+        <!-- Middle Column -->
+        <div class="w3-col m7 abcd">
+            <div class="w3-row-padding abcd">
+                <div class="w3-col m4">
+                    <div style=" text-align: center ; padding:6px;" class="w3-card w3-round " style="background:#FFCC10;
+                    text-align:center;">
+
+
+                        <h4 class="w3-opacity" style="font-family: 'Montserrat', sans-serif; padding-top: 0.5ch;">TOTAL
+                            USERS</h4>
+                        <h1 style=" font-family: 'Montserrat' , sans-serif; text-align:center;padding-bottom: 1.5ch;">
+                            <span id="nbr">120</span>
+
+                        </h1>
+
+                    </div>
+                </div>
+                <div class="w3-col m4">
+                    <div class="w3-card w3-round w3-white">
+
+                        <div class="w3-container w3-padding">
+                            <h6 class="w3-opacity">TOTAL EVENTS</h6>
+                            <p contenteditable="true" class="w3-border w3-padding">Type: Webinar</p>
+                            <button type="button" class="w3-button w3-green"><i class="fa fa-pencil"></i>
+                                 Post Event Update</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-col m4">
+                    <div class="w3-card w3-round w3-white">
+
+                        <div class="w3-container w3-padding">
+                            <h6 class="w3-opacity">UPCOMING EVENTS</h6>
+                            <p contenteditable="true" class="w3-border w3-padding">Type: Webinar</p>
+                            <button type="button" class="w3-button w3-green"><i class="fa fa-pencil"></i>
+                                 Post Event Update</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <div class="w3-row-padding">
+                <div class="w3-col m12">
+                    <div class="w3-card w3-round w3-white">
+
+                        <div class="w3-container w3-padding">
+                            <h6 class="w3-opacity">Add an Upcoming Event</h6>
+                            <p contenteditable="true" class="w3-border w3-padding">Type: Webinar</p>
+                            <button type="button" class="w3-button w3-green"><i class="fa fa-pencil"></i>
+                                 Post Event Update</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+                <img src="https://www.w3schools.com/w3images/avatar5.png" alt="Avatar"
+                    class="w3-left w3-circle w3-margin-right" style="width:60px">
+                <span class="w3-right w3-opacity">16 min</span>
+                <h4>Jane Doe</h4><br>
+                <hr class="w3-clear">
+                <p>Text loading ...</p>
+                <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom">
+                    Details</button>
+
+            </div>
+
+
+
+
+
+
+
+
+            <!-- End Middle Column -->
+        </div>
+
+        <!-- Right Column -->
+        <div class="w3-col m2">
+            <div class="w3-card w3-round w3-white w3-center">
+                <div class="w3-container">
+                    <p>Upcoming Events:</p>
+                    <img src="https://www.w3schools.com/w3images/forest.jpg" alt="Forest" style="width:100%;">
+                    <p><strong>Holiday</strong></p>
+                    <p>Friday 15:00</p>
+                    <p><button class="w3-button w3-block w3-theme-l4">Info</button></p>
+                </div>
+            </div>
+            <br>
+
+            <div class="w3-card w3-round w3-white w3-padding-16 w3-center">
+                <div class="w3-container">
+                    <p>Edit Profile</p>
+                    <img src="https://www.w3schools.com/w3images/avatar6.png" alt="Avatar" style="width:50%"><br>
+                    <span>Admin</span>
+                    <div class="w3-row w3-opacity">
+                        <div class="w3-half">
+                            <button class="w3-button w3-block w3-green w3-section" title="Accept"><i
+                                    class="fa fa-check"></i></button>
+                        </div>
+                        <div class="w3-half">
+                            <button class="w3-button w3-block w3-red w3-section" title="Decline"><i
+                                    class="fa fa-remove"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <div class="w3-card w3-round w3-white w3-padding-16 w3-center">
+                <div class="w3-container">
+                    <p>Delete Account</p>
+
+                    <div class="w3-row w3-opacity">
+                        <div class="w3-half">
+                            <button class="w3-button w3-block w3-green w3-section" title="Accept">
+                                <i class="fa fa-check"></i></button>
+                        </div>
+                        <div class="w3-half">
+                            <button class="w3-button w3-block w3-red w3-section" title="Decline">
+                                <i class="fa fa-remove"></i></button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <br>
+
+
+
+
+            <!-- End Right Column -->
+        </div>
+
+
+
+
+        <!-- End Grid -->
+    </div>
+
+
+    <!-- End Page Container -->
+</div>
+<div style="text-align: center ; padding:6px; background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+background: linear-gradient(to right, #25c481, #25b7c4);
+font-family: 'Roboto', sans-serif;" class="w3-container w3-card w3-white w3-round w3-margin pad">
+    <br>
+    <!-- <img src="https://www.w3schools.com/w3images/avatar2.png" alt="Avatar"
+        class="w3-left w3-circle w3-margin-right" style="width:60px"> -->
+    <!-- <span class="w3-right w3-opacity">1 min</span> -->
+    <h1 style="text-align: center ; padding:6px;">User Details</h1><br>
+    <td>
+        <button class="btn btn-primary" style="cursor:pointer"><a routerLink="../signup" class="navbar-brand"
+                routerLinkActive="active">ADD USER</a> </button>
+    </td>
+    <hr class="w3-clear">
+    <table class="table light ui-widget-datatable" cellpadding="0" cellspacing="0">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col" class="cc">SEQ.</th>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Password hash</th>
+                <th scope="col">Email</th>
+                <th scope="col">Option</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let user of users;let i = index;'>
+                <!-- <td><img [src]='product.imageUrl' [title]='product.productName' [style.width.px]='imageWidth'
+                        [style.margin.px]='imageMargin'></td> -->
+                <td class="cc">{{i}}</td>
+                <td>{{user._id}}</td>
+                <td>{{user.name}}</td>
+                <td style="word-wrap:break-word">{{user.password}}</td>
+                <td>{{user.email}}</td>
+
+                <!-- <td>
+                    <button class="btn btn-danger" style="cursor:pointer"> Delete</button>
+                </td> -->
+
+
+                <!-- <td>
+                    <button class="btn btn-warning" style="cursor:pointer" *ngIf="_auth.loggedIn()"
+                        (click)="editUser(user)" style="margin-left: 20px;"> Edit</button>
+                </td>
+                -->
+                <td>
+                    <div class="wrapper">
+                        <div class="icon trash">
+                            <div class="tooltip">Delete</div>
+                            <span (click)="deleteUser(user)" ><i
+                                    class="fas fa-trash"></i></span>
+                        </div>
+                    </div>
+
+
+
+
+                    <!-- <button class="btn btn-danger" style="cursor:pointer; border-radius: 3cm;size: 5cm;"
+                        (click)="deleteUser(user)" (click)="reloadCurrentPage()">
+                        <i class="fas fa-trash"></i></button> -->
+                </td>
+
+            </tr>
+
+        </tbody>
+        <!-- <tbody>
+            <tr>
+                <td><b>1</b></td>
+                <td>Mark</td>
+                <td>asdfjasndfkljsandflkjSNDFLKJASDFNASD8FASDFPASFASFKJASNDFASDF807ASDFASD0FAS7DGASYGD87YASD87GYAS
+                </td>
+                <td>Kollam</td>
+                <td>3</td>
+                <td><button type="button" class="btn btn-primary">
+                        More..</button></td>
+            </tr>
+            <tr>
+                <td><b>2</b></td>
+                <td>Stephen</td>
+                <td>nhdfklhvbdalfvadfv9adf8ads0fsadf09asdf8asdf09asdf0asdfsa0dfsa09dfas0df
+                </td>
+                <td>Thrissur</td>
+                <td>3</td>
+                <td><button type="button" class="btn btn-primary">
+                        More..</button></td>
+            </tr>
+            <tr>
+                <td><b>3</b></td>
+                <td>Teja</td>
+                <td>ueriqwer8wqer70qwer87wqer0wqeryw7qerwqe78rqw8er7we8rweyrwqe8r7wqerwqe8r
+                </td>
+                <td>Idukki</td>
+                <td>3</td>
+                <td><button type="button" class="btn btn-primary">
+                        More..</button></td>
+            </tr>
+        </tbody> -->
+    </table>
+
+
+
+
+
+</div>
+<br>

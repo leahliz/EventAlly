@@ -1,8 +1,10 @@
+
 .main{
     border-radius: 30px;
     margin:2%;
 }
 .bg-image{
+    
     filter:blur(5px);
     -webkit-filter:blur(5px) ;
     height:380px;
@@ -45,7 +47,7 @@ button{
 .greet{
     background-image: url("https://i.pinimg.com/originals/d9/af/b2/d9afb2f0c922f34cb6ae8ad219f53ca3.gif");
     background-size: cover;
-    height: 2000px;
+    height: 100%;
     margin:1%;
     color: cornsilk;
     font-size: x-large;
@@ -59,10 +61,23 @@ margin-left: 2%;
 margin-top: 2%;
 
 }
+carousel{
+    background-image: url("https://i.pinimg.com/originals/d9/af/b2/d9afb2f0c922f34cb6ae8ad219f53ca3.gif");
+    z-index: -1;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 20px;
+    border-radius: 2;
+    border-color: ivory;
+    
+}
+
+
 /*.col-sm-2{
     display: inline-block;
     background-color: blue;
     float:left;
     width:100%;
 }*/
+
 

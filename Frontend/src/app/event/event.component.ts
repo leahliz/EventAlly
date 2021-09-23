@@ -18,6 +18,8 @@ export class EventComponent implements OnInit {
   check(){
     if(this.event.owned==localStorage.getItem('owner'))
     return !!localStorage.getItem('owner');
+    else if(localStorage.getItem("userType")=='admin')
+    return !!localStorage.getItem("userType")
   }
 update(){
   this.router.navigate(["/update"],{state:{"data":this.event}})

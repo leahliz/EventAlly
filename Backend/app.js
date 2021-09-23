@@ -106,17 +106,17 @@ app.post("/dlt",function(req,res){
     console.log("deleted");})
 });
 
-username = 'admin@123.com';
-password = '123456';
+username =  'admin@gmail.com';
+password = '4FJaRrkFjVvRe6S';
 
 app.post('/adminLogin', (req, res) => {
 
-    let userData = req.body;
+    let nuser = req.body;
 
-    if (username !== userData.email) {
+    if (nuser.email !==username) {
         res.status(401).send('Invalid Username');
     }
-    else if (password !== userData.password) {
+    else if (nuser.password!==password) {
         res.status(401).send('Invalid Password');
     }
     else {
@@ -126,6 +126,24 @@ app.post('/adminLogin', (req, res) => {
         res.status(200).send({ token });
     }
 });
+
+app.get("/users",function (req, res) {
+
+    userData.find()
+        .then(function (users) {
+            res.send(users);
+        });
+});
+app.delete('/removeUsers/:id', (req, res) => {
+    id = req.params.id;
+    userData.findByIdAndDelete({ "_id": id })
+        .then(() => {
+            console.log("Deleted")
+            /*window.location.reload();*/
+        })
+});
+
+
 /*
 app.post('/register', (req, res) => {
 

@@ -1,0 +1,33 @@
+.page {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: yellow;
+  }
+
+
+  .content { 
+    width: 100%;
+    background:salmon;
+  }
+
+.footer, header{
+    flex: none;
+    width: 100%;
+    margin: auto auto 0 auto;
+    background:gray;
+}
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    height: 100vh;
+}
+/* global styling for sticky footer*/
+html, body, app-root {
+    height: 100%;
+  }body {
+    margin-bottom: 0;
+    margin-top: 0;
+  }

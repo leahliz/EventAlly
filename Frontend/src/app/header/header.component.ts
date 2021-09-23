@@ -14,12 +14,16 @@ export class HeaderComponent implements OnInit {
   constructor(public _auth: AuthService,
     private _router: Router,public eventService:EventsService) { }
 search:any;
+public name:any;
 nval:EventModel;
   ngOnInit(): void {
+    this.name=localStorage.getItem('owner');
   }
+ 
   logoutUser() {
     localStorage.removeItem('token')
-    this._router.navigate([''])
+    this._router.navigate(['']);
+    localStorage.removeItem('owner');
   }
   loggedUser() {
     this._router.navigate(['/books'])

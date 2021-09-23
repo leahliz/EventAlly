@@ -3,6 +3,7 @@ import { AuthService } from "../auth.service";
 import { Router } from '@angular/router'
 import { FormBuilder, Validators } from '@angular/forms';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -26,8 +27,11 @@ export class LoginComponent implements OnInit {
           localStorage.setItem('token', res.token);
           localStorage.setItem("owner",res.email)
           // this.loginOccured.emit(1);
-          //localStorage.setItem("userType", 'user');
-          this._router.navigate(['/events']);
+          localStorage.setItem("userType", 'user');
+          this._router.navigate(['/events'])
+          .then(()=>{
+            window.location.reload();
+          });
         },
         (err) => {
           console.log(err);

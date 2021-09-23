@@ -10,7 +10,7 @@
 section {
   position: relative;
   min-height: 100vh;
-  background:#0877cc;
+  background:#221d1d;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,7 +73,7 @@ section .container .user .formBx form h2 {
   text-align: center;
   width: 100%;
   margin-bottom: 10px;
-  color: #555;
+  color: rgba(243, 0, 0, 0.925);
 }
 
 section .container .user .formBx form input {
@@ -122,7 +122,7 @@ section .container .signupBx {
   pointer-events: none;
 }
 
-section .container.active .signupBx {
+section .container   .signupBx {
   pointer-events: initial;
 }
 
@@ -130,7 +130,7 @@ section .container .signupBx .formBx {
   left: 100%;
 }
 
-section .container.active .signupBx .formBx {
+section .container   .signupBx .formBx {
   left: 0;
 }
 
@@ -138,7 +138,7 @@ section .container .signupBx .imgBx {
   left: -100%;
 }
 
-section .container.active .signupBx .imgBx {
+section .container   .signupBx .imgBx {
   left: 0%;
 }
 
@@ -146,7 +146,7 @@ section .container .signinBx .formBx {
   left: 0%;
 }
 
-section .container.active .signinBx .formBx {
+section .container   .signinBx .formBx {
   left: 100%;
 }
 
@@ -154,7 +154,7 @@ section .container .signinBx .imgBx {
   left: 0%;
 }
 
-section .container.active .signinBx .imgBx {
+section .container   .signinBx .imgBx {
   left: -100%;
 }
 
