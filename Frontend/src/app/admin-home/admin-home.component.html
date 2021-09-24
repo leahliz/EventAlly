@@ -5,13 +5,13 @@
         <!-- Left Column -->
         <div class="w3-col m3">
             <!-- Alert Box -->
-            <div
+            <div style="background-color: rgb(225, 227, 231);"
                 class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
                 <span onclick="this.parentElement.style.display='none'"
                     class="w3-button w3-theme-l3 w3-display-topright">
                     <i class="fa fa-remove"></i>
                 </span>
-                <p><strong>Hey! Admin Welcome Back!</strong></p>
+                <p ><strong>Hey! Admin Welcome Back!</strong></p>
                 <p>Check out the new events</p>
             </div>
             <!-- Profile -->
@@ -107,8 +107,11 @@
 
                         <h4 class="w3-opacity" style="font-family: 'Montserrat', sans-serif; padding-top: 0.5ch;">TOTAL
                             USERS</h4>
+                            
                         <h1 style=" font-family: 'Montserrat' , sans-serif; text-align:center;padding-bottom: 1.5ch;">
-                            <span id="nbr">120</span>
+                            <span id="nbr">
+                                {{users.length}}
+                            </span>
 
                         </h1>
 
@@ -251,7 +254,7 @@ font-family: 'Roboto', sans-serif;" class="w3-container w3-card w3-white w3-roun
     <h1 style="text-align: center ; padding:6px;">User Details</h1><br>
     <td>
         <button class="btn btn-primary" style="cursor:pointer"><a routerLink="../signup" class="navbar-brand"
-                routerLinkActive="active">ADD USER</a> </button>
+                routerLinkActive="active" (click)="add()">ADD USER</a> </button>
     </td>
     <hr class="w3-clear">
     <table class="table light ui-widget-datatable" cellpadding="0" cellspacing="0">

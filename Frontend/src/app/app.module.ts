@@ -22,6 +22,7 @@ import { AboutComponent } from './about/about.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 
@@ -41,7 +42,8 @@ import { HomeComponent } from './home/home.component';
     AboutComponent,
     AdminHomeComponent,
     AdminloginComponent,
-    HomeComponent
+    HomeComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

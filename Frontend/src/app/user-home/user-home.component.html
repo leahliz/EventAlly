@@ -4,7 +4,7 @@
         <!-- Left Column -->
         <div class="w3-col m3">
             <!-- Alert Box -->
-            <div
+            <div style="background-color: cornsilk;"
                 class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
                 <span onclick="this.parentElement.style.display='none'"
                     class="w3-button w3-theme-l3 w3-display-topright">
@@ -31,45 +31,31 @@
             <div class="w3-card w3-round">
                 <div class="w3-white">
 
-                    <button onclick="myFunction('Demo2')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i
+                    <!--<button onclick="myFunction('Demo2')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i
                             class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> My Events</button>
                     <div id="Demo2" class="w3-hide w3-container">
                         <p>Some other text..</p>
-                    </div>
+                    </div>-->
                     <button onclick="myFunction('Demo3')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i
-                            class="fa fa-users fa-fw w3-margin-right"></i> My Photos</button>
+                            class="fa fa-users fa-fw w3-margin-right"></i> Event Gallery</button>
                     <div id="Demo3" class="w3-hide w3-container">
                         <div class="w3-row-padding">
                             <br>
-                            <div class="w3-half">
-                                <img src="https://www.w3schools.com/w3images/lights.jpg" style="width:100%"
-                                    class="w3-margin-bottom">
+                            <div class="w3-half" *ngFor="let event of events;let i=index" [attr.data-index]="i">
+                                <img class="w3-margin-bottom" style="width:100%" [src]="event.image"
+                                    (click)="eventMore(i)" />
                             </div>
-                            <div class="w3-half">
-                                <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%"
-                                    class="w3-margin-bottom">
-                            </div>
-                            <div class="w3-half">
-                                <img src="https://www.w3schools.com/w3images/mountains.jpg" style="width:100%"
-                                    class="w3-margin-bottom">
-                            </div>
-                            <div class="w3-half">
-                                <img src="https://www.w3schools.com/w3images/forest.jpg" style="width:100%"
-                                    class="w3-margin-bottom">
-                            </div>
-                            <div class="w3-half">
-                                <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%"
-                                    class="w3-margin-bottom">
-                            </div>
-                            <div class="w3-half">
-                                <img src="https://www.w3schools.com/w3images/snow.jpg" style="width:100%"
-                                    class="w3-margin-bottom">
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+           
             <br>
+
+            
+                
+
+       
 
             <!-- Interests -->
             <div class="w3-card w3-round w3-white w3-hide-small">

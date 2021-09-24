@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
-import { User } from '../interfaces/user';
+
+import { User } from './user.model';
 
 @Component({
   selector: 'app-admin-home',
@@ -11,13 +12,8 @@ import { User } from '../interfaces/user';
 export class AdminHomeComponent implements OnInit {
   title: String = "User List";
    
-  
-  users: User = {
-    _id:'',
-    name: '',
-    email: '',
-    password: '',
-  };
+
+  users: User[] | any;
   document: any;
   constructor(public _auth: AuthService,
     public _router: Router) { }
@@ -27,6 +23,9 @@ export class AdminHomeComponent implements OnInit {
       console.log(data);
       this.users = JSON.parse(JSON.stringify(data));
     })
+  }
+  add(){
+    this._router.navigate(["/signup"]);
   }
   deleteUser(user: User): void {
     this._auth.deleteUser(user._id)
